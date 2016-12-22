@@ -1,0 +1,154 @@
+.post-container {
+    margin: 20px 20px 0 0;  
+    overflow: auto
+}
+.post-thumb {
+    float: left
+}
+.post-thumb img {
+    display: block
+}
+.post-content {
+    margin-top: -15px;
+    margin-left: 90px;
+}
+.post-title {
+    font-weight: bold;
+    padding: 0px;
+}
+
+ html {
+ margin: 0 auto;
+ max-width: 400px;
+ background-color: #F3F3F3;
+ }
+ body {
+ font-family: -apple-system, BlinkMacSystemFont,  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",  "Fira Sans", "Droid Sans", "Helvetica Neue",  sans-serif;
+ margin-left:20px;
+ margin-right:20px;
+ }
+ h1 {
+ font-weight: 800;
+ font-size:30px;
+ }
+ .color-box h1{
+ margin-top: 10px;
+ margin-bottom: 10px;
+ }
+ #red-pink {
+    color: white !important;
+ background: #EC5D57; /* For browsers that do not support gradients */    
+ background: -webkit-linear-gradient(68deg, #EC5D57, #B36AE2); /* For Safari 5.1 to 6.0 */
+ background: -o-linear-gradient(68deg, #EC5D57, #B36AE2); /* For Opera 11.1 to 12.0 */
+ background: -moz-linear-gradient(68deg, #EC5D57, #B36AE2); /* For Firefox 3.6 to 15 */
+ background: linear-gradient(68deg, #EC5D57, #B36AE2); /* Standard syntax (must be last) */
+ }
+ #yellow-blue {
+    color:white !important;
+ background: #70BF41; /* For browsers that do not support gradients */    
+ background: -webkit-linear-gradient(68deg, #70BF41, #F5D328); /* For Safari 5.1 to 6.0 */
+ background: -o-linear-gradient(68deg, #70BF41, #F5D328); /* For Opera 11.1 to 12.0 */
+ background: -moz-linear-gradient(68deg, #70BF41, #F5D328); /* For Firefox 3.6 to 15 */
+ background: linear-gradient(68deg, #70BF41, #F5D328); /* Standard syntax (must be last) */
+ }
+ #green-blue {
+    color: white !important;
+ background: #70BF41; /* For browsers that do not support gradients */    
+ background: -webkit-linear-gradient(68deg, #51A7F9, #70BF41); /* For Safari 5.1 to 6.0 */
+ background: -o-linear-gradient(68deg, #51A7F9, #70BF41); /* For Opera 11.1 to 12.0 */
+ background: -moz-linear-gradient(68deg, #51A7F9, #70BF41); /* For Firefox 3.6 to 15 */
+ background: linear-gradient(68deg, #51A7F9, #70BF41); /* Standard syntax (must be last) */
+ }
+ #yellow-yellow {
+    color: white !important;
+ background: #70BF41; /* For browsers that do not support gradients */    
+ background: -webkit-linear-gradient(68deg, #F5D328, #F39019); /* For Safari 5.1 to 6.0 */
+ background: -o-linear-gradient(68deg, #F5D328, #F39019); /* For Opera 11.1 to 12.0 */
+ background: -moz-linear-gradient(68deg, #F5D328, #F39019); /* For Firefox 3.6 to 15 */
+ background: linear-gradient(68deg, #F5D328, #F39019); /* Standard syntax (must be last) */
+ }
+ #grey-white {
+ background: #70BF41; /* For browsers that do not support gradients */    
+ background: -webkit-linear-gradient(68deg, #B6B9B9, #53585F); /* For Safari 5.1 to 6.0 */
+ background: -o-linear-gradient(68deg, #B6B9B9, #53585F); /* For Opera 11.1 to 12.0 */
+ background: -moz-linear-gradient(68deg, #B6B9B9, #53585F); /* For Firefox 3.6 to 15 */
+ background: linear-gradient(68deg, #B6B9B9, #53585F); /* Standard syntax (must be last) */
+ }
+ #snow-white {
+ background: white; 
+ color: black !important;
+ }
+ #snow-white .glyph {
+ filter: invert(100%);
+ }
+ #dark-grey {
+ background: #4A525B; 
+ color: white !important;
+ }
+ .color-box {
+ /*            height: 400px;
+ */         margin-top:20px;
+ margin-bottom: 30px;
+ padding-left:30px;
+ padding-right:30px;
+ padding-top:15px;
+ padding-bottom:15px;
+ font-weight:500 !important;
+ /*color: white !important;*/
+ }
+ .one-time {
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+ border-radius: 4px;
+ }
+ .paragraph {
+ font-style: italic;
+ font-size: 15px;
+ line-height: 1.5;
+ }
+ .attribute-up {
+ font-size:16px;
+ margin-bottom: 0px;
+ text-align: right;
+ }
+ .attribute-down {
+ margin-top: 2px;
+ font-size:12px;
+ text-align: right;
+ }
+ .glyph {
+ float: right;
+ vertical-align: top;
+ margin-left: 3px;
+ }
+ .album-cover {
+    position: absolute;
+ float: left;
+ vertical-align: top;
+ margin-left: 3px;
+ }
+ #glyph-accomodate {
+ margin-left: 5px;
+ }
+ hr {
+ border-top: 0.2px solid rgba(0,0,0,0.15);
+ }
+ .sub-caption {
+ color: grey;
+ }
+ a {
+ text-decoration: none;
+ color: #1AD6FD;
+ }
+ .slick-slide {
+ margin: 0px 0px;
+ }
+ .slick-prev:before {
+ visibility: none;
+ margin-right: 0px;
+ color: black;
+ }
+ .slick-next:before {
+ visibility: none;
+ margin-left: 0px;
+ color: black;
+ }
