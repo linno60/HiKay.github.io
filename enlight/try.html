@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.some-element {
+  background-color: blue;
+  width: 100%;
+}
+
+.parent-div {
+  background-color: red;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.child-div {
+  background-color: green;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  width: 15px;
+}
+
+.child-div-r {
+  background-color: blue;
+  height: 100%;
+  right: 0px;
+  position: absolute;
+  width: 15px;
+}
+
+
+</style>
+	<title></title>
+</head>
+<body>
+<div class="some-element">
+  <div class="parent-div">
+    <div class="child-div">
+      <p><</p>
+    </div>
+    <div class="child-div-r">
+      <p>></p>
+    </div>
+    <h1>Some text lorem ipsum</h1>
+  </div>
+
+  <div class="another-div">
+    <p>lorem ipsum</p>
+  </div>
+</div>
+</body>
+</html>
