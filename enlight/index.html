@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Enlight</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+      <script src="jquery.js"></script>
+      <script src="jquery.collapse.js"></script>
+      <style type="text/css">
+         html {
+         margin: 0 auto;
+         max-width: 400px;
+         background-color: #F3F3F3;
+         }
+         body {
+         font-family: -apple-system, BlinkMacSystemFont,  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",  "Fira Sans", "Droid Sans", "Helvetica Neue",  sans-serif;
+         margin-left:20px;
+         margin-right:20px;
+         }
+         h1 {
+         font-weight: 800;
+         font-size:30px;
+         }
+         .color-box h1{
+         margin-top: 10px;
+         margin-bottom: 10px;
+         }
+         #red-pink {
+         
+         background: #EC5D57; /* For browsers that do not support gradients */    
+         background: -webkit-linear-gradient(68deg, #EC5D57, #B36AE2); /* For Safari 5.1 to 6.0 */
+         background: -o-linear-gradient(68deg, #EC5D57, #B36AE2); /* For Opera 11.1 to 12.0 */
+         background: -moz-linear-gradient(68deg, #EC5D57, #B36AE2); /* For Firefox 3.6 to 15 */
+         background: linear-gradient(68deg, #EC5D57, #B36AE2); /* Standard syntax (must be last) */
+         }
+         #yellow-blue {
+         background: #70BF41; /* For browsers that do not support gradients */    
+         background: -webkit-linear-gradient(68deg, #70BF41, #F5D328); /* For Safari 5.1 to 6.0 */
+         background: -o-linear-gradient(68deg, #70BF41, #F5D328); /* For Opera 11.1 to 12.0 */
+         background: -moz-linear-gradient(68deg, #70BF41, #F5D328); /* For Firefox 3.6 to 15 */
+         background: linear-gradient(68deg, #70BF41, #F5D328); /* Standard syntax (must be last) */
+         }
+         #green-blue {
+         background: #70BF41; /* For browsers that do not support gradients */    
+         background: -webkit-linear-gradient(68deg, #51A7F9, #70BF41); /* For Safari 5.1 to 6.0 */
+         background: -o-linear-gradient(68deg, #51A7F9, #70BF41); /* For Opera 11.1 to 12.0 */
+         background: -moz-linear-gradient(68deg, #51A7F9, #70BF41); /* For Firefox 3.6 to 15 */
+         background: linear-gradient(68deg, #51A7F9, #70BF41); /* Standard syntax (must be last) */
+         }
+         #yellow-yellow {
+         background: #70BF41; /* For browsers that do not support gradients */    
+         background: -webkit-linear-gradient(68deg, #F5D328, #F39019); /* For Safari 5.1 to 6.0 */
+         background: -o-linear-gradient(68deg, #F5D328, #F39019); /* For Opera 11.1 to 12.0 */
+         background: -moz-linear-gradient(68deg, #F5D328, #F39019); /* For Firefox 3.6 to 15 */
+         background: linear-gradient(68deg, #F5D328, #F39019); /* Standard syntax (must be last) */
+         }
+         #grey-white {
+         background: #70BF41; /* For browsers that do not support gradients */    
+         background: -webkit-linear-gradient(68deg, #B6B9B9, #53585F); /* For Safari 5.1 to 6.0 */
+         background: -o-linear-gradient(68deg, #B6B9B9, #53585F); /* For Opera 11.1 to 12.0 */
+         background: -moz-linear-gradient(68deg, #B6B9B9, #53585F); /* For Firefox 3.6 to 15 */
+         background: linear-gradient(68deg, #B6B9B9, #53585F); /* Standard syntax (must be last) */
+         }
+         #snow-white {
+         background: white; 
+         color: black !important;
+         }
+         #snow-white .glyph {
+         filter: invert(100%);
+         }
+         #dark-grey {
+         background: #4A525B; 
+         color: white !important;
+         }
+         .color-box {
+         margin-top:20px;
+         margin-bottom: 30px;
+         padding-left:30px;
+         padding-right:30px;
+         padding-top:15px;
+         padding-bottom:15px;
+         font-weight:500 !important;
+         border-radius: 4px;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+         }
+         .paragraph {
+         font-style: italic;
+         font-size: 15px;
+         line-height: 1.5;
+         }
+         .attribute-up {
+         font-size:16px;
+         margin-bottom: 0px;
+         text-align: right;
+         }
+         .attribute-down {
+         margin-top: 2px;
+         font-size:12px;
+         text-align: right;
+         }
+         .glyph {
+         float: right;
+         vertical-align: top;
+         margin-left: 3px;
+         }
+         #glyph-accomodate {
+         margin-left: 5px;
+         }
+         hr {
+         border-top: 0.2px solid rgba(0,0,0,0.15);
+         }
+         .sub-caption {
+         color: grey;
+         }
+         a {
+         text-decoration: none;
+         color: #1AD6FD;
+         }
+      </style>
+   </head>
+   <body>
+<!--       <h1 style="font-size:84px; margin-top: 20px; margin-bottom:-10px; font-weight:100;">2016</h1>
+      <h3 style="line-height: 1.5; font-weight: 100;">A year of memories with <a href="#memory-learners">learners</a>, <a href="#memory-collaborators">collaborators</a> and <a href="#memory-explorers">explorers</a>.</h3>
+      <h3 style="line-height: 1.5; font-weight: 100;">A year entertained by bigger screen, a louder voice and a better channel. </h3>
+      <h3 style="line-height: 1.5; font-weight: 100;">A year inspired by eliminating pricetags, empowering mind and stepping out.</h3>
+ -->
+ 		<h1 style="font-size:84px; margin-top: 20px; margin-bottom:-10px">2016</h1>
+
+      <br>
+      <hr>
+      <br>
+      <h1 style="margin-bottom:-20px;" id="memory-learners">Memories With...</h1>
+      <h2>These Learners</h2>
+      <div class="color-box" id="green-blue" style="color:white;">
+         <h1>Agustina Boffi</h1>
+         <h1>Mariano Vaca</h1>
+         <h1>Balak Roman</h1>
+         <h1>Priya Nair</h1>
+         <hr>
+         <p class="paragraph">We all come from different parts of this planet. Exploring thanksgiving with you guys has been wonderful.</p>
+         <hr>
+         <div>
+            <img class="glyph" src="glyph/food.png" width="35px" height="35px">
+            <p class="attribute-up">Thanksgiving</p>
+            <p class="attribute-down">Dr. Eliza’s Family</p>
+         </div>
+      </div>
+      <div class="color-box" id="yellow-yellow" style="color:white;">
+         <h1>David Mitchell</h1>
+         <h1>Nick Pinto</h1>
+         <h1>Alex Poux</h1>
+         <hr>
+         <p class="paragraph">Midterms are stressful. Thrilling rides at Six Flags came to rescue just in time.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/rides.png" width="35px" height="35px">
+            <p class="attribute-up">Thrill Rides</p>
+            <p class="attribute-down">Six Flags</p>
+         </div>
+      </div>
+      <div class="color-box" id="grey-white" style="color:white;">
+         <h1>Steven Yeung</h1>
+         <h1>Vincent Hu</h1>
+         <h1>Jack Tang</h1>
+         <h1>Vergil Gu</h1>
+         <h1>Fred Fu</h1>
+         <hr>
+         <p class="paragraph">A phone-losing, livestock-eating, deck-landing, lock-signing, plot-twist-revealing holiday. At Korea.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/korea.png" width="35px" height="35px">
+            <p class="attribute-up">Graduation Trip</p>
+            <p class="attribute-down">Korea</p>
+         </div>
+      </div>
+      <div class="color-box" id="red-pink" style="color:white;">
+         <h1>Verlina Huang</h1>
+         <h1>Abigail Fong</h1>
+         <h1>Weiyee Lee</h1>
+         <h1>Daesan Ko</h1>
+         <h1>Leona Ren</h1>
+         <hr>
+         <p class="paragraph">Together, we met and murdered creepy-creep-creep of the year, Dr. Zhang at an exhilarating room escape adventure.</p>
+         <hr>
+         <div>
+            <img class="glyph" src="glyph/pin.png" width="35px" height="35px">
+            <p class="attribute-up">Underwater Studies</p>
+            <p class="attribute-down">At Moon Room</p>
+         </div>
+      </div>
+      <div class="color-box" id="yellow-blue" style="color:white;">
+         <h1>Stanley Fong</h1>
+         <h1>Jason Wen</h1>
+         <h1>Tiffany Liu</h1>
+         <h1>Jun Park</h1>
+         <h1>Leona Ren</h1>
+         <hr>
+         <p class="paragraph">Go-karts are great. They’re fun and exciting, but not life-threatening. A even better highlight with you guys: towing electrical bikes with raincoats on a highway.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/race.png" width="35px" height="35px">
+            <p class="attribute-up">Go-Karts Races</p>
+            <p class="attribute-down">At Disc Kart</p>
+         </div>
+      </div>
+      <br>
+      <br>
+      <hr>
+      <br>
+      <h1 style="margin-bottom:-20px;" id="memory-explorers">Memories With...</h1>
+      <h2>These Explorers</h2>
+      <div class="color-box" id="green-blue" style="color:white;">
+         <h1>Agustina Boffi</h1>
+         <h1>Mariano Vaca</h1>
+         <h1>Balak Roman</h1>
+         <h1>Priya Nair</h1>
+         <hr>
+         <p class="paragraph">We all come from different parts of this planet. Exploring thanksgiving with you guys has been wonderful.</p>
+         <hr>
+         <div>
+            <img class="glyph" src="glyph/food.png" width="35px" height="35px">
+            <p class="attribute-up">Thanksgiving</p>
+            <p class="attribute-down">Dr. Eliza’s Family</p>
+         </div>
+      </div>
+      <div class="color-box" id="yellow-yellow" style="color:white;">
+         <h1>David Mitchell</h1>
+         <h1>Nick Pinto</h1>
+         <h1>Alex Poux</h1>
+         <hr>
+         <p class="paragraph">Midterms are stressful. Thrilling rides at Six Flags came to rescue just in time.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/rides.png" width="35px" height="35px">
+            <p class="attribute-up">Thrill Rides</p>
+            <p class="attribute-down">Six Flags</p>
+         </div>
+      </div>
+      <div class="color-box" id="grey-white" style="color:white;">
+         <h1>Steven Yeung</h1>
+         <h1>Vincent Hu</h1>
+         <h1>Jack Tang</h1>
+         <h1>Vergil Gu</h1>
+         <h1>Fred Fu</h1>
+         <hr>
+         <p class="paragraph">A phone-losing, livestock-eating, deck-landing, lock-signing, plot-twist-revealing holiday. At Korea.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/korea.png" width="35px" height="35px">
+            <p class="attribute-up">Graduation Trip</p>
+            <p class="attribute-down">Korea</p>
+         </div>
+      </div>
+      <div class="color-box" id="red-pink" style="color:white;">
+         <h1>Verlina Huang</h1>
+         <h1>Abigail Fong</h1>
+         <h1>Weiyee Lee</h1>
+         <h1>Daesan Ko</h1>
+         <h1>Leona Ren</h1>
+         <hr>
+         <p class="paragraph">Together, we met and murdered creepy-creep-creep of the year, Dr. Zhang at an exhilarating room escape adventure.</p>
+         <hr>
+         <div>
+            <img class="glyph" src="glyph/pin.png" width="35px" height="35px">
+            <p class="attribute-up">Underwater Studies</p>
+            <p class="attribute-down">At Moon Room</p>
+         </div>
+      </div>
+      <div class="color-box" id="yellow-blue" style="color:white;">
+         <h1>Stanley Fong</h1>
+         <h1>Jason Wen</h1>
+         <h1>Tiffany Liu</h1>
+         <h1>Jun Park</h1>
+         <h1>Leona Ren</h1>
+         <hr>
+         <p class="paragraph">Go-karts are great. They’re fun and exciting, but not life-threatening. A even better highlight with you guys: towing electrical bikes with raincoats on a highway.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/race.png" width="35px" height="35px">
+            <p class="attribute-up">Go-Karts Races</p>
+            <p class="attribute-down">At Disc Kart</p>
+         </div>
+      </div>
+      <br>
+      <br>
+      <hr>
+      <br>
+      <h1 style="margin-bottom:-20px;" id="memory-collaborators">Memories With...</h1>
+      <h2>These Colleagues</h2>
+      <div class="color-box" id="green-blue" style="color:white;">
+         <h1>Agustina Boffi</h1>
+         <h1>Mariano Vaca</h1>
+         <h1>Balak Roman</h1>
+         <h1>Priya Nair</h1>
+         <hr>
+         <p class="paragraph">We all come from different parts of this planet. Exploring thanksgiving with you guys has been wonderful.</p>
+         <hr>
+         <div>
+            <img class="glyph" src="glyph/food.png" width="35px" height="35px">
+            <p class="attribute-up">Thanksgiving</p>
+            <p class="attribute-down">Dr. Eliza’s Family</p>
+         </div>
+      </div>
+      <div class="color-box" id="yellow-yellow" style="color:white;">
+         <h1>David Mitchell</h1>
+         <h1>Nick Pinto</h1>
+         <h1>Alex Poux</h1>
+         <hr>
+         <p class="paragraph">Midterms are stressful. Thrilling rides at Six Flags came to rescue just in time.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/rides.png" width="35px" height="35px">
+            <p class="attribute-up">Thrill Rides</p>
+            <p class="attribute-down">Six Flags</p>
+         </div>
+      </div>
+      <div class="color-box" id="grey-white" style="color:white;">
+         <h1>Steven Yeung</h1>
+         <h1>Vincent Hu</h1>
+         <h1>Jack Tang</h1>
+         <h1>Vergil Gu</h1>
+         <h1>Fred Fu</h1>
+         <hr>
+         <p class="paragraph">A phone-losing, livestock-eating, deck-landing, lock-signing, plot-twist-revealing holiday. At Korea.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/korea.png" width="35px" height="35px">
+            <p class="attribute-up">Graduation Trip</p>
+            <p class="attribute-down">Korea</p>
+         </div>
+      </div>
+      <div class="color-box" id="red-pink" style="color:white;">
+         <h1>Verlina Huang</h1>
+         <h1>Abigail Fong</h1>
+         <h1>Weiyee Lee</h1>
+         <h1>Daesan Ko</h1>
+         <h1>Leona Ren</h1>
+         <hr>
+         <p class="paragraph">Together, we met and murdered creepy-creep-creep of the year, Dr. Zhang at an exhilarating room escape adventure.</p>
+         <hr>
+         <div>
+            <img class="glyph" src="glyph/pin.png" width="35px" height="35px">
+            <p class="attribute-up">Underwater Studies</p>
+            <p class="attribute-down">At Moon Room</p>
+         </div>
+      </div>
+      <div class="color-box" id="yellow-blue" style="color:white;">
+         <h1>Stanley Fong</h1>
+         <h1>Jason Wen</h1>
+         <h1>Tiffany Liu</h1>
+         <h1>Jun Park</h1>
+         <h1>Leona Ren</h1>
+         <hr>
+         <p class="paragraph">Go-karts are great. They’re fun and exciting, but not life-threatening. A even better highlight with you guys: towing electrical bikes with raincoats on a highway.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/race.png" width="35px" height="35px">
+            <p class="attribute-up">Go-Karts Races</p>
+            <p class="attribute-down">At Disc Kart</p>
+         </div>
+      </div>
+      <h1>Entertained By</h1>
+      <h2>A Louder Voice</h2>
+      <h2>A Bigger Screen</h2>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Westworld</h1>
+         <h2 class="sub-caption">TV Series</h2>
+         <hr>
+         <p class="paragraph">Westworld crafts an artificial world at a futuristic amusement park, where fantasies can lead to real consequnces.</p>
+         <img style="width: 100%" src="img/ww1.jpg">
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/film.png" width="35px" height="35px">
+            <p class="attribute-up">From HBO Channel</p>
+            <p class="attribute-down">Jonathan N., Lisa J. and More</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Saturday Night Live</h1>
+         <h2 class="sub-caption">Live TV Program</h2>
+         <hr>
+         <p class="paragraph">The more-than-three-decade-old TV show continues to stride in delivering thought-provoking political sketches. Even more impressive that it’s live.</p>
+         <img style="width: 100%" src="img/snl1.png">
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/film.png" width="35px" height="35px">
+            <p class="attribute-up">From NBC Channel</p>
+            <p class="attribute-down">Leslie J., Tina F. and More</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Moana</h1>
+         <h2 class="sub-caption">Animated Movie</h2>
+         <hr>
+         <p class="paragraph">The visually-stunning and acoustically-refreshening animated movie introduces polynesian culture to the world.</p>
+         <img style="width: 100%" src="img/moana1.png">
+         <img style="width: 100%" src="img/moana2.png">
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/film.png" width="35px" height="35px">
+            <p class="attribute-up">WDAS Studio</p>
+            <p class="attribute-down">John M., Ron C. and More</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Your Name.</h1>
+         <h2 class="sub-caption">Anime</h2>
+         <hr>
+         <p class="paragraph">A wild adventure of switching bodies. A heroic journey to save the protagonist’s hometown, Itomori. An emotive love story. It’s gold.</p>
+         <img style="width: 100%" src="img/name.jpg">
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/film.png" width="35px" height="35px">
+            <p class="attribute-up">From CoMix Wave Films</p>
+            <p class="attribute-down">Makoto Shinkai and More</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">The Sketchbook</h1>
+         <h2 class="sub-caption">Student Film</h2>
+         <hr>
+         <p class="paragraph">Working with Technicolor, Sennheiser and the SILIF initiative, SUIS Gubei brings student films to the next level.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/film.png" width="35px" height="35px">
+            <p class="attribute-up">SUIS and SILIF</p>
+            <p class="attribute-down">Hermes Dai and More</p>
+         </div>
+      </div>
+      <br>
+      <br>
+      <hr>
+      <br>
+      <h1 style="margin-bottom:-20px;">Entertained By...</h1>
+      <h2>A Better Channel</h2>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Louis Rossman</h1>
+         <h2 class="sub-caption">Youtube Channel</h2>
+         <hr>
+         <p class="paragraph">A phone-losing, livestock-eating, deck-landing, lock-signing, plot-twist-revealing holiday. At Korea.</p>
+         <img style="width: 100%" src="img/name.jpg">
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/korea.png" width="35px" height="35px">
+            <p class="attribute-up">Employees of</p>
+            <p class="attribute-down">Xiehe Education Group</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Marques Brownlee</h1>
+         <h2 class="sub-caption">Youtube Channel</h2>
+         <hr>
+         <p class="paragraph">A phone-losing, livestock-eating, deck-landing, lock-signing, plot-twist-revealing holiday. At Korea.</p>
+         <img style="width: 100%" src="img/name.jpg">
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/korea.png" width="35px" height="35px">
+            <p class="attribute-up">Employees of</p>
+            <p class="attribute-down">Xiehe Education Group</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Nat and Lo</h1>
+         <h2 class="sub-caption">Youtube Channel</h2>
+         <hr>
+         <p class="paragraph">A phone-losing, livestock-eating, deck-landing, lock-signing, plot-twist-revealing holiday. At Korea.</p>
+         <img style="width: 100%" src="img/name.jpg">
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/korea.png" width="35px" height="35px">
+            <p class="attribute-up">Employees of</p>
+            <p class="attribute-down">Xiehe Education Group</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Community Channel</h1>
+         <h2 class="sub-caption">Youtube Channel</h2>
+         <hr>
+         <p class="paragraph">A phone-losing, livestock-eating, deck-landing, lock-signing, plot-twist-revealing holiday. At Korea.</p>
+         <img style="width: 100%" src="img/cchannel.png">
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/korea.png" width="35px" height="35px">
+            <p class="attribute-up">communitychannel</p>
+            <p class="attribute-down">Xiehe Education Group</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">ATP.FM</h1>
+         <h2 class="sub-caption">Podcast</h2>
+         <hr>
+         <p class="paragraph">A phone-losing, livestock-eating, deck-landing, lock-signing, plot-twist-revealing holiday. At Korea.</p>
+         <img style="width: 100%" src="img/name.jpg">
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/korea.png" width="35px" height="35px">
+            <p class="attribute-up">Employees of</p>
+            <p class="attribute-down">Xiehe Education Group</p>
+         </div>
+      </div>
+      <br>
+      <br>
+      <hr>
+      <br>
+      <h1 style="margin-bottom:-20px;">Strive For...</h1>
+      <h2>Eliminating Pricetags</h2>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Peter Zupke</h1>
+         <h2 class="sub-caption">College Student</h2>
+         <hr>
+         <p class="paragraph">We all come from different parts of this planet. Exploring thanksgiving with you guys has been wonderful.</p>
+         <hr>
+         <div>
+            <img class="glyph" src="glyph/food.png" width="35px" height="35px">
+            <p class="attribute-up">Student</p>
+            <p class="attribute-down">At Georgia Tech</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Library Genesis</h1>
+         <h2 class="sub-caption">Web Service</h2>
+         <hr>
+         <p class="paragraph">Midterms are stressful. Thrilling rides at Six Flags came to rescue just in time.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/rides.png" width="35px" height="35px">
+            <p class="attribute-up">Thrill Rides</p>
+            <p class="attribute-down">Six Flags</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Freedompop</h1>
+         <h2 class="sub-caption">Celluar Provider</h2>
+         <hr>
+         <p class="paragraph">A phone-losing, livestock-eating, deck-landing, lock-signing, plot-twist-revealing holiday. At Korea.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/korea.png" width="35px" height="35px">
+            <p class="attribute-up">Graduation Trip</p>
+            <p class="attribute-down">Korea</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Solarmovie</h1>
+         <h2 class="sub-caption">Web Service</h2>
+         <hr>
+         <p class="paragraph">Together, we met and murdered creepy-creep-creep of the year, Dr. Zhang at an exhilarating room escape adventure.</p>
+         <hr>
+         <div>
+            <img class="glyph" src="glyph/pin.png" width="35px" height="35px">
+            <p class="attribute-up">Underwater Studies</p>
+            <p class="attribute-down">At Moon Room</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Fedora 25</h1>
+         <h2 class="sub-caption">Operating System</h2>
+         <hr>
+         <p class="paragraph">After years of delays, the new desktop compositor Wayland finally arrives in a stable, user-friendly desktop Linux distro - Fedora 25.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/race.png" width="35px" height="35px">
+            <p class="attribute-up">Available From</p>
+            <p class="attribute-down">The Fedora Project</p>
+         </div>
+      </div>
+      <br>
+      <br>
+      <hr>
+      <br>
+      <h1 style="margin-bottom:-20px;">Strive For...</h1>
+      <h2>Empowering Mind</h2>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Verlina Huang</h1>
+         <h2 class="sub-caption">College Student</h2>
+         <hr>
+         <p class="paragraph">The ultimate benchmark of alchool endurance. I'd argue that's pretty empowering, right?</p>
+         <hr>
+         <div>
+            <img class="glyph" src="glyph/food.png" width="35px" height="35px">
+            <p class="attribute-up">Student of</p>
+            <p class="attribute-down">University College London</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">All Professors</h1>
+         <h2 class="sub-caption">At Georgia Tech</h2>
+         <hr>
+         <p class="paragraph">Midterms are stressful. Thrilling rides at Six Flags came to rescue just in time.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/rides.png" width="35px" height="35px">
+            <p class="attribute-up">Employees of</p>
+            <p class="attribute-down">Georgia Tech</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">All Teachers</h1>
+         <h2 class="sub-caption">At SUIS Gubei</h2>
+         <hr>
+         <p class="paragraph">A phone-losing, livestock-eating, deck-landing, lock-signing, plot-twist-revealing holiday. At Korea.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/korea.png" width="35px" height="35px">
+            <p class="attribute-up">Employees of</p>
+            <p class="attribute-down">Xiehe Education Group</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Evan</h1>
+         <h2 class="sub-caption">TV Ad</h2>
+         <hr>
+         <p class="paragraph">Together, we met and murdered creepy-creep-creep of the year, Dr. Zhang at an exhilarating room escape adventure.</p>
+         <hr>
+         <div>
+            <img class="glyph" src="glyph/pin.png" width="35px" height="35px">
+            <p class="attribute-up">Created By</p>
+            <p class="attribute-down">Sandy Hook Promise</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">I'm With Her</h1>
+         <h2 class="sub-caption">Presidential Campaign</h2>
+         <hr>
+         <p class="paragraph">After years of delays, the new desktop compositor Wayland finally arrives in a stable, user-friendly desktop Linux distro - Fedora 25.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/race.png" width="35px" height="35px">
+            <p class="attribute-up">By Hillary Clinton</p>
+            <p class="attribute-down">With Hillary for America</p>
+         </div>
+      </div>
+      <br>
+      <br>
+      <hr>
+      <br>
+      <h1 style="margin-bottom:-20px;">Strive For...</h1>
+      <h2>Stepping Out</h2>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Carek Bao</h1>
+         <h2 class="sub-caption">Fisherman</h2>
+         <hr>
+         <p class="paragraph">The legend.<br>The fisherman.<br>The fluffiest of them all.</p>
+         <hr>
+         <div>
+            <img class="glyph" src="glyph/food.png" width="35px" height="35px">
+            <p class="attribute-up">Former Student</p>
+            <p class="attribute-down">SUIS Gubei</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Pokemon Go</h1>
+         <h2 class="sub-caption">Smartphone Game</h2>
+         <hr>
+         <p class="paragraph">Midterms are stressful. Thrilling rides at Six Flags came to rescue just in time.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/rides.png" width="35px" height="35px">
+            <p class="attribute-up">Nintendo</p>
+            <p class="attribute-down">With Niantic Labs</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">The Lodge</h1>
+         <h2 class="sub-caption">Musical</h2>
+         <hr>
+         <p class="paragraph">A phone-losing, livestock-eating, deck-landing, lock-signing, plot-twist-revealing holiday. At Korea.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/korea.png" width="35px" height="35px">
+            <p class="attribute-up">Zodiak Kids Studios</p>
+            <p class="attribute-down">By Steven, Raymond and More</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">The Grand Tour</h1>
+         <h2 class="sub-caption">Reality Show</h2>
+         <hr>
+         <p class="paragraph">Together, we met and murdered creepy-creep-creep of the year, Dr. Zhang at an exhilarating room escape adventure.</p>
+         <hr>
+         <div>
+            <img class="glyph" src="glyph/pin.png" width="35px" height="35px">
+            <p class="attribute-up">Amazon Video</p>
+            <p class="attribute-down">By Jeremy, Richard and More</p>
+         </div>
+      </div>
+      <div class="color-box" id="snow-white" style="color:white;">
+         <h1 style="margin-bottom:-20px;">Made to Move</h1>
+         <h2 class="sub-caption">TV Campaign</h2>
+         <hr>
+         <p class="paragraph">After years of delays, the new desktop compositor Wayland finally arrives in a stable, user-friendly desktop Linux distro - Fedora 25.</p>
+         <hr>
+         <div>
+            <img class="glyph" id="glyph-accomodate" src="glyph/race.png" width="35px" height="35px">
+            <p class="attribute-up">Apple Watch</p>
+            <p class="attribute-down">By Apple</p>
+         </div>
+      </div>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  $('.your-class').slick({
+  	  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true,
+
+    setting-name: setting-value
+  });
+});
+
+</script>
+   </body>
+</html>
