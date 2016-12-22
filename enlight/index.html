@@ -15,18 +15,32 @@
       <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
       <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
       <script type="text/javascript">
+      var isTouchDevice = 'ontouchstart' in document.documentElement;
          $(document).on('ready', function() {
-           $('.one-time').slick({
-             // appendArrows: "$body",
+            if (isTouchDevice) {
+            $('.one-time').slick({
+             arrows: false,
              dots: true,
              infinite: true,
              speed: 300,
              slidesToShow: 1,
              adaptiveHeight: true,
-             // autoplay: true,
-             // autoplaySpeed: 2000,
            });
+           } else {
+            $('.one-time').slick({
+             arrows: true,
+             dots: true,
+             infinite: true,
+             speed: 300,
+             slidesToShow: 1,
+             adaptiveHeight: true,
+             prevArrow:"<img class='a-left control-c prev slick-prev' src='glyph/tl.png'>",
+               nextArrow:"<img class='a-right control-c next slick-next' src='glyph/tr.png'>"
+           });
+
+           }
          });
+
       </script>
       <h1 style="font-size:84px; margin-top: 20px; margin-bottom:-10px">2016</h1>
       <h1 style="font-size:24px; margin-top: 0px; margin-bottom:-10px">You made it great.</h1>
@@ -251,7 +265,7 @@
             <h1>Weiyee Lee</h1>
             <h1>Shine Chen</h1>
             <hr>
-            <p class="paragraph">Jessica leads and organizes every backstage aspect of the show. Hermes, Jacky and Weiyee brings a cinematic take to the live performance and archival recordings. Shine creates and directs interactive elements during the show.</p>
+            <p class="paragraph">Jessica leads and organizes every backstage aspect of the show. Hermes, Jacky and Weiyee bring thier cinematic talent to live performances and archival recordings. Shine creates and directs interactive elements during the show.</p>
             <hr>
             <div>
                <img class="glyph" src="glyph/theatre.png" width="35px" height="35px">
@@ -423,7 +437,7 @@
       <h2>A Better Channel</h2>
       <section class="one-time slider" id="snow-white">
          <div class="color-box">
-            <h1 style="margin-bottom:-20px;">Natalie Tran</h1>
+            <h1 style="margin-bottom:-20px;">communitycnl</h1>
             <h2 class="sub-caption">Youtube Channel</h2>
             <hr>
             <p class="paragraph">With regular uploads each month for the past 10 years, Australian Youtuber Natalie Tran continues to capture humourous aspects of her everyday life.</p>
@@ -500,7 +514,7 @@
          <p class="paragraph">We all come from different parts of this planet. Exploring thanksgiving with you guys has been wonderful.</p>
          <hr>
          <div>
-            <img class="glyph" src="glyph/food.png" width="35px" height="35px">
+            <img class="glyph" src="glyph/study.png" width="35px" height="35px">
             <p class="attribute-up">Student</p>
             <p class="attribute-down">At Georgia Tech</p>
          </div>
@@ -512,7 +526,7 @@
          <p class="paragraph">Midterms are stressful. Thrilling rides at Six Flags came to rescue just in time.</p>
          <hr>
          <div>
-            <img class="glyph" id="glyph-accomodate" src="glyph/rides.png" width="35px" height="35px">
+            <img class="glyph" id="glyph-accomodate" src="glyph/library.png" width="35px" height="35px">
             <p class="attribute-up">Thrill Rides</p>
             <p class="attribute-down">Six Flags</p>
          </div>
@@ -524,7 +538,7 @@
          <p class="paragraph">A phone-losing, livestock-eating, deck-landing, lock-signing, plot-twist-revealing holiday. At Korea.</p>
          <hr>
          <div>
-            <img class="glyph" id="glyph-accomodate" src="glyph/korea.png" width="35px" height="35px">
+            <img class="glyph" id="glyph-accomodate" src="glyph/fp.png" width="35px" height="35px">
             <p class="attribute-up">Graduation Trip</p>
             <p class="attribute-down">Korea</p>
          </div>
@@ -536,7 +550,7 @@
          <p class="paragraph">Together, we met and murdered creepy-creep-creep of the year, Dr. Zhang at an exhilarating room escape adventure.</p>
          <hr>
          <div>
-            <img class="glyph" src="glyph/pin.png" width="35px" height="35px">
+            <img class="glyph" src="glyph/solarm.png" width="35px" height="35px">
             <p class="attribute-up">Underwater Studies</p>
             <p class="attribute-down">At Moon Room</p>
          </div>
@@ -548,7 +562,7 @@
          <p class="paragraph">After years of delays, the new desktop compositor Wayland finally arrives in a stable, user-friendly desktop Linux distro - Fedora 25.</p>
          <hr>
          <div>
-            <img class="glyph" id="glyph-accomodate" src="glyph/race.png" width="35px" height="35px">
+            <img class="glyph" id="glyph-accomodate" src="glyph/fedora.png" width="35px" height="35px">
             <p class="attribute-up">Available From</p>
             <p class="attribute-down">The Fedora Project</p>
          </div>
@@ -563,10 +577,10 @@
          <h1 style="margin-bottom:-20px;">Verlina Huang</h1>
          <h2>College Student</h2>
          <hr>
-         <p class="paragraph">The ultimate benchmark of alchool endurance. I'd argue that's pretty empowering, right?</p>
+         <p class="paragraph">The ultimate benchmark of alchool endurance. Very, very empowering.</p>
          <hr>
          <div>
-            <img class="glyph" src="glyph/food.png" width="35px" height="35px">
+            <img class="glyph" src="glyph/study.png" width="35px" height="35px">
             <p class="attribute-up">Student of</p>
             <p class="attribute-down">University College London</p>
          </div>
@@ -578,7 +592,7 @@
          <p class="paragraph">Midterms are stressful. Thrilling rides at Six Flags came to rescue just in time.</p>
          <hr>
          <div>
-            <img class="glyph" id="glyph-accomodate" src="glyph/rides.png" width="35px" height="35px">
+            <img class="glyph" id="glyph-accomodate" src="glyph/gt.png" width="35px" height="35px">
             <p class="attribute-up">Employees of</p>
             <p class="attribute-down">Georgia Tech</p>
          </div>
@@ -590,7 +604,7 @@
          <p class="paragraph">A phone-losing, livestock-eating, deck-landing, lock-signing, plot-twist-revealing holiday. At Korea.</p>
          <hr>
          <div>
-            <img class="glyph" id="glyph-accomodate" src="glyph/korea.png" width="35px" height="35px">
+            <img class="glyph" id="glyph-accomodate" src="glyph/school.png" width="35px" height="35px">
             <p class="attribute-up">Employees of</p>
             <p class="attribute-down">Xiehe Education Group</p>
          </div>
@@ -602,7 +616,7 @@
          <p class="paragraph">Together, we met and murdered creepy-creep-creep of the year, Dr. Zhang at an exhilarating room escape adventure.</p>
          <hr>
          <div>
-            <img class="glyph" src="glyph/pin.png" width="35px" height="35px">
+            <img class="glyph" src="glyph/sandy.png" width="35px" height="35px">
             <p class="attribute-up">Created By</p>
             <p class="attribute-down">Sandy Hook Promise</p>
          </div>
@@ -614,7 +628,7 @@
          <p class="paragraph">After years of delays, the new desktop compositor Wayland finally arrives in a stable, user-friendly desktop Linux distro - Fedora 25.</p>
          <hr>
          <div>
-            <img class="glyph" id="glyph-accomodate" src="glyph/race.png" width="35px" height="35px">
+            <img class="glyph" id="glyph-accomodate" src="glyph/hil.png" width="35px" height="35px">
             <p class="attribute-up">By Hillary Clinton</p>
             <p class="attribute-down">With Hillary for America</p>
          </div>
@@ -633,7 +647,7 @@
          <p class="paragraph">The legend.<br>The fisherman.<br>The fluffiest of them all.</p>
          <hr>
          <div>
-            <img class="glyph" src="glyph/food.png" width="35px" height="35px">
+            <img class="glyph" src="glyph/fish.png" width="35px" height="35px">
             <p class="attribute-up">Former Student</p>
             <p class="attribute-down">SUIS Gubei</p>
          </div>
@@ -645,7 +659,7 @@
          <p class="paragraph">Midterms are stressful. Thrilling rides at Six Flags came to rescue just in time.</p>
          <hr>
          <div>
-            <img class="glyph" id="glyph-accomodate" src="glyph/rides.png" width="35px" height="35px">
+            <img class="glyph" id="glyph-accomodate" src="glyph/pokemon.png" width="35px" height="35px">
             <p class="attribute-up">Nintendo</p>
             <p class="attribute-down">With Niantic Labs</p>
          </div>
@@ -657,7 +671,7 @@
          <p class="paragraph">A phone-losing, livestock-eating, deck-landing, lock-signing, plot-twist-revealing holiday. At Korea.</p>
          <hr>
          <div>
-            <img class="glyph" id="glyph-accomodate" src="glyph/korea.png" width="35px" height="35px">
+            <img class="glyph" id="glyph-accomodate" src="glyph/lodge.png" width="35px" height="35px">
             <p class="attribute-up">Zodiak Kids Studios</p>
             <p class="attribute-down">By Steven, Raymond and More</p>
          </div>
@@ -669,7 +683,7 @@
          <p class="paragraph">Together, we met and murdered creepy-creep-creep of the year, Dr. Zhang at an exhilarating room escape adventure.</p>
          <hr>
          <div>
-            <img class="glyph" src="glyph/pin.png" width="35px" height="35px">
+            <img class="glyph" src="glyph/grandt.png" width="35px" height="35px">
             <p class="attribute-up">Amazon Video</p>
             <p class="attribute-down">By Jeremy, Richard and More</p>
          </div>
@@ -681,7 +695,7 @@
          <p class="paragraph">After years of delays, the new desktop compositor Wayland finally arrives in a stable, user-friendly desktop Linux distro - Fedora 25.</p>
          <hr>
          <div>
-            <img class="glyph" id="glyph-accomodate" src="glyph/race.png" width="35px" height="35px">
+            <img class="glyph" id="glyph-accomodate" src="glyph/watch.png" width="35px" height="35px">
             <p class="attribute-up">Apple Watch</p>
             <p class="attribute-down">By Apple</p>
          </div>

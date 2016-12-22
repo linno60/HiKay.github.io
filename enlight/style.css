@@ -132,6 +132,18 @@
  hr {
  border-top: 0.2px solid rgba(0,0,0,0.15);
  }
+ div.transbox {
+  /*margin-left: -30px;*/
+  /*margin-right: 300px;*/
+  /*position: absolute;*/
+
+  background-color: #ffffff;
+  /*border: 1px solid black;*/
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+  height: 100%;
+
+}
  .sub-caption {
  color: grey;
  }
@@ -142,7 +154,39 @@
  .slick-slide {
  margin: 0px 0px;
  }
- .slick-prev:before {
+/* .slick-prev:before, .slick-next:before { font-family: "slick"; font-size: 40px; line-height: 1; color: red; opacity: 0.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
+
+.slick-prev:before { content: "‹"; }
+[dir="rtl"] .slick-prev:before { content: "›"; }
+
+[dir="rtl"] .slick-next { left: -10px; top: 70px; right: auto; }
+.slick-next:before { content: "›"; }
+[dir="rtl"] .slick-next:before { content: "‹"; }
+*/
+.slick-prev {
+    left: 0px;
+}
+.slick-next {
+    right: 0px;
+}
+
+.child-div {
+  background-color: green;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  width: 15px;
+}
+
+.child-div-r {
+  background-color: blue;
+  height: 100%;
+  right: 0px;
+  position: absolute;
+  width: 15px;
+}
+
+/* .slick-prev:before {
  visibility: none;
  margin-right: 0px;
  color: black;
@@ -152,3 +196,4 @@
  margin-left: 0px;
  color: black;
  }
+*/
