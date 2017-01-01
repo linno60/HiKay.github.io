@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music</title>
+	<link rel="stylesheet" type="text/css" href="appearance.css"/>
+</head>
+<body id="page">
+<div id="song-card">
+<br>
+	<audio id="audio" autoplay><source src="music/song_1.mp3" type="audio/mpeg"></audio>
+	<div id="image-wrapper">
+	<img id="album-cover" src="images/albumCover_1.png">
+	</div>
+	<input id="timecode" type="range" min="0" max="1" step="0.01" value="0" oninput="previewProgress()" onchange="setProgress()">
+	<div id="progress-bar">
+	<element id="starting-time">0:00</element>
+	<element id="ending-time">-0:00</element>
+	</div>
+	<br>
+	<div id="song-info">
+	<a id="song-title" href="">Hands to Myself</a>
+	<br>
+	<a id="artist-album" href="">Miranda Covering Selena</a>
+	</div>
+	<br>
+	<div id="playback-controls">
+	<button class="control" id="back" type="button" onclick="back()"></button>
+	<button class="control" id="pause" type="button" onclick="playPause()"></button>
+	<button class="control" id="play" type="button" onclick="playPause()"></button>
+	<button class="control" id="seek" type="button" onclick="seek()"></button>
+	</div>
+	<div id="volume-controls">
+	<button id="volume-softer" type="button"></button>
+	<input id="volume-slider" type="range" min="0" max="1" step="0.01" value="1" oninput="setVolume()">
+	<button id="volume-louder" type="button"></button>
+	</div>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
