@@ -10,9 +10,9 @@
 <body id="page">
 <div id="song-card">
 <br>
-	<audio id="audio" autoplay><source src="music/song_1.mp3" type="audio/mpeg"></audio>
+	<audio id="audio" autoplay preload loop><source src="music/song_1.m4a" type="audio/mpeg"></audio>
 	<div id="image-wrapper">
-	<img id="album-cover" src="images/albumCover_1.png">
+	<img id="album-cover" src="images/albumCover_1.png" onclick="playPause()">
 	</div>
 	<input id="timecode" type="range" min="0" max="1" step="0.01" value="0" oninput="previewProgress()" onchange="setProgress()">
 	<div id="progress-bar">
@@ -21,15 +21,15 @@
 	</div>
 	<br>
 	<div id="song-info">
-	<a id="song-title" href="">Hands to Myself</a>
+	<a id="song-title">Hands to Myself</a>
 	<br>
-	<a id="artist-album" href="">Miranda Covering Selena</a>
+	<a id="artist-album">Miranda Covering Selena</a>
 	</div>
 	<br>
 	<div id="playback-controls">
 	<button class="control" id="back" type="button" onclick="back()"></button>
-	<button class="control" id="pause" type="button" onclick="playPause()"></button>
-	<button class="control" id="play" type="button" onclick="playPause()"></button>
+	<button class="control" id="play" type="button" onclick="play()"></button>
+	<button class="control" id="pause" type="button" onclick="pause()"></button>
 	<button class="control" id="seek" type="button" onclick="seek()"></button>
 	</div>
 	<div id="volume-controls">
