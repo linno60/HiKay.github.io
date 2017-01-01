@@ -63,9 +63,11 @@ function pause() {
 
 function seek() {
 	song.currentTime = song.currentTime + 15;
+	play();
 }
 function back() {
 	song.currentTime = song.currentTime - 15;
+	play();
 }
 function setVolume() {
    var volume = document.getElementById("volume-slider");
@@ -104,6 +106,7 @@ function setProgress() {
    albumCover.style["boxShadow"] = shadow;
    currentCode.style.color = "#797D85";
    isAdjustingBar = false;
+   play();
 }
 
 audio.addEventListener("timeupdate", updateProgress, false);
@@ -143,6 +146,8 @@ function truncate (num, places) {
         function forceSafariPlayAudio() {
             audioEl.load();
             audioEl.play();
+            // may cause problems
+            document.getElementById('play').click();
         }
         var audioEl = document.getElementById('audio');
         audioEl.addEventListener('loadstart', function() {
