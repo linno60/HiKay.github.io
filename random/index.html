@@ -3,7 +3,8 @@
 <head>
 	<title>Decision</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 </head>
 <body>
 <style type="text/css">
@@ -23,11 +24,13 @@
 }
 
  #card {
-    width: 80%;
-    height: 250px;
+    width: 70%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-top: 50px;
     margin-bottom: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 20px;
 }
 
 div#card {
@@ -35,6 +38,26 @@ div#card {
 	padding-left: 10%;
 	padding-right: 10%;
 }
+
+.refresh {
+	padding-top: 28px;
+	float:right;
+	width: 25px;
+	height: 25px;
+}
+
+#dice-head {
+	display: inline-block;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.history {
+	font-size: 10px;
+	font-color: grey;
+}
+
 
 button {
 border: none;
@@ -66,34 +89,67 @@ button:hover {
 
 }
 </style>
-<div id="card">
-	<h1 class="heading" id="dice-head">Dice</h1>
-	<hr>
-	<h1 class="result" id="dice">...</h1>
-	<button onclick="dice()">Roll dice</button>
 
-</div>
 <div id="card">
-	<h1 class="heading" id="coin-head">Coin</h1>
+<div class="above-line">
+<h1 class="heading" id="dice-head">Dice</h1>
+<img onclick="dice()" class="refresh" src="refresh.png">
+</div>
 	<hr>
-	<h1 class="result" id="coin">...</h1>
-	<button onclick="coin()">Flip Coin</button>
+	<p class="history" id="dice-history">No History Yet.</h1>
+	<h1 class="result" id="dice">N/A</h1>
+</div>
+
+<div id="card">
+<div class="above-line">
+<h1 class="heading" id="dice-head">Coin</h1>
+<img onclick="coin()" class="refresh" src="refresh.png">
+</div>
+	<hr>
+	<p class="history" id="coin-history">No History Yet.</h1>
+	<h1 class="result" id="coin">N/A</h1>
+</div>
 
 </div>
 <script type="text/javascript">
 var temp;
-dice();
-coin();
+var tempString = "";
+var diceArray = [];
+var coinArray = [];
+
 function dice() {
-	temp = Math.floor(Math.random()*6) + 1;
+	temp = Math.floor(Math.random() * 6) + 1;
+	diceArray[diceArray.length] = temp;
 	document.getElementById("dice").innerHTML = temp;
+	tempString = "";
+	for (var i = diceArray.length; i > diceArray.length - 14; i--) {
+		if (diceArray[i] && i < diceArray.length - 1) {
+			tempString = tempString + ", ";
+		}
+		if (diceArray[i]) {
+			tempString = tempString + diceArray[i];
+		}
+	}
+	document.getElementById("dice-history").innerHTML = "History: " + tempString;
 }
 
 	
 function coin() {
 	temp = Math.floor(Math.random()*2)
 	var flip = temp == 1 ? "Heads" : "Tails"
+	var flip2 = temp == 1 ? "H" : "T"
 	document.getElementById("coin").innerHTML = flip;
+	coinArray[coinArray.length] = flip2;
+	tempString = "";
+	for (var i = coinArray.length; i > coinArray.length - 14; i--) {
+		if (coinArray[i] && i < coinArray.length - 1) {
+			tempString = tempString + ", ";
+		}
+		if (coinArray[i]) {
+			tempString = tempString + coinArray[i];
+		}
+	}
+	document.getElementById("coin-history").innerHTML = "History: " + tempString;
 }
 </script>
 </body>
