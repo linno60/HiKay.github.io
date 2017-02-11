@@ -14,6 +14,8 @@
 
 
       <meta charset="utf-8">
+      <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+
 <script type="text/javascript">/** Shrinkwrap URL:
  *      /v2/bundles/js?modules=fastclick%401.0.6%2Co-autoinit%401.2.0&shrinkwrap=
  */
@@ -41,6 +43,24 @@ if ('addEventListener' in document) {
 }
 var totalScore = 0;
 var submitDetail = 0;
+
+var config = {
+	apiKey: "AIzaSyBb_yxCv42rKrebtFnGPC2QeJ5OMkK4pp4",
+	authDomain: "timer-a2554.firebaseapp.com",
+	databaseURL: "https://timer-a2554.firebaseio.com",
+	storageBucket: "timer-a2554.appspot.com",
+	messagingSenderId: "928041949658"
+};
+firebase.initializeApp(config);
+var database = firebase.database();
+var timeStamp = Date.now();
+var userAgent = navigator.userAgent;
+var string = "aaaa";
+
+firebase.database().ref('survey/entry/' + timeStamp).update({
+    "timeStamp": timeStamp,
+    "userAgent": userAgent
+});
 
 $(document).ready(function(){
  var result=0;
@@ -91,8 +111,15 @@ $(document).ready(function(){
        submitDetail = submitDetail + shortDesc + "/";
        totalScore = totalScore + parseInt(dataScore);
        $(next_node).show();
+       firebase.database().ref('survey/entry/' + timeStamp + '/response/' + cardNumber).update({
+    		"result": shortDesc,
+    		"scoreForQuestion": parseInt(dataScore),
+    		"cumulativeScore": totalScore
+  		});
    }
-   $("#load").attr("src", "https://rec-kayyin.rhcloud.com/KAYYIN/EN/progress/" + submitDetail);
+  firebase.database().ref('survey/entry/' + timeStamp + '/response').update({
+    "unifiedString": submitDetail
+  });
  });
 
 
@@ -619,7 +646,7 @@ html[xmlns] .flexslider .slides {
                   </div>
                </li>
             </ul>
-           <iframe id="load" src="" style="display:none;""></iframe>
+           
          </div>
       </div>
       <div class="question question-3 ">
@@ -653,7 +680,7 @@ html[xmlns] .flexslider .slides {
                </li>
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
 
       </div>
 
@@ -689,7 +716,7 @@ html[xmlns] .flexslider .slides {
 
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
 
       </div>
 
@@ -726,7 +753,7 @@ html[xmlns] .flexslider .slides {
 
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
 
       </div>
 
@@ -762,7 +789,7 @@ html[xmlns] .flexslider .slides {
                </li>
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
 
@@ -802,7 +829,7 @@ html[xmlns] .flexslider .slides {
                </li>
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
 
@@ -827,7 +854,7 @@ html[xmlns] .flexslider .slides {
                </li>
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
 
@@ -863,7 +890,7 @@ html[xmlns] .flexslider .slides {
 
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
 
@@ -899,7 +926,7 @@ html[xmlns] .flexslider .slides {
 
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
 
@@ -935,7 +962,7 @@ html[xmlns] .flexslider .slides {
 
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
 
@@ -976,7 +1003,7 @@ html[xmlns] .flexslider .slides {
                </li>
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
 
@@ -1011,7 +1038,7 @@ html[xmlns] .flexslider .slides {
                </li>
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
 
@@ -1046,7 +1073,7 @@ html[xmlns] .flexslider .slides {
                </li>
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
       <div class="question question-15 ">
@@ -1080,7 +1107,7 @@ html[xmlns] .flexslider .slides {
                </li>
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
       <div class="question question-16 ">
@@ -1114,7 +1141,7 @@ html[xmlns] .flexslider .slides {
                </li>
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
       <div class="question question-17 ">
@@ -1148,7 +1175,7 @@ html[xmlns] .flexslider .slides {
                </li>
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
       <div class="question question-18 ">
@@ -1182,7 +1209,7 @@ html[xmlns] .flexslider .slides {
                </li>
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
       <div class="question question-19 ">
@@ -1216,7 +1243,7 @@ html[xmlns] .flexslider .slides {
                </li>
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
 
@@ -1251,7 +1278,7 @@ html[xmlns] .flexslider .slides {
                </li>
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
 
@@ -1289,7 +1316,7 @@ html[xmlns] .flexslider .slides {
                </li>
             </ul>
          </div>
-         <iframe id="load" src="" style="display:none;""></iframe>
+         
       </div>
 
 
