@@ -56,10 +56,14 @@ var database = firebase.database();
 var timeStamp = Date.now();
 var userAgent = navigator.userAgent;
 var string = "aaaa";
+var date = new Date();
+var timeString = date.toUTCString();
 
-firebase.database().ref('survey/entry/' + timeStamp).update({
+firebase.database().ref('survey/entry/' + timeString).update({
+	"timeString": timeString,
     "timeStamp": timeStamp,
-    "userAgent": userAgent
+    "userAgent": userAgent,
+    "locale": "en_US"
 });
 
 $(document).ready(function(){
@@ -111,13 +115,13 @@ $(document).ready(function(){
        submitDetail = submitDetail + shortDesc + "/";
        totalScore = totalScore + parseInt(dataScore);
        $(next_node).show();
-       firebase.database().ref('survey/entry/' + timeStamp + '/response/' + cardNumber).update({
+       firebase.database().ref('survey/entry/' + timeString + '/response/' + cardNumber).update({
     		"result": shortDesc,
     		"scoreForQuestion": parseInt(dataScore),
     		"cumulativeScore": totalScore
   		});
    }
-  firebase.database().ref('survey/entry/' + timeStamp + '/response').update({
+  firebase.database().ref('survey/entry/' + timeString + '/response').update({
     "unifiedString": submitDetail
   });
  });
