@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Developing iOS 10 Apps with Swift</title>
+        <link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet">
+  		<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script> 
+      <!-- <meta charset="utf-8" > -->
+      <style type="text/css">
+      	body {
+      		margin: 70px 70px 70px 70px;
+      		font-family: -apple-system, "Helvetica", "Segoe UI", "Arial", sans-serif;
+      		line-height: 1.5;
+      	}
+      	h1 {
+      		margin-bottom: -20px;
+      	}
+      	h2 {
+      		margin-bottom: 0px;
+      	}
+      	a {
+      		text-decoration: none;
+      		color: rgb(0,122,255);
+      	}
+      	#footer {
+      		font-color: grey;
+      		text-align: center;
+      		font-size: 12px;
+      	}
+      	#screenDimmer,#video {display:none;position:absolute;}
+#screenDimmer {top:0;left:0;width:100%;height:100%;background:#000;opacity:.5;
+    /* ie opacity */ -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter:alpha(opacity=50);}
+#video {top:50%;left:50%;margin-left:-240px;margin-top:-193px;}
+      </style>
+
+   </head>
+   <body>
+   <h1>Developing iOS 10 Apps with Swift</h1>
+   <h3>CS193P, Spring 2017, Paul Hegarty</h3>
+   <hr>
+   <h2>Course Description</h2>
+      <div>
+      <span><b>Updated for iOS 10 and Swift.</b>&nbsp;<span class="colour" style="color:rgb(0, 0, 0)"><span class="font"><span class="size">Tools and APIs required to build applications for the iPhone and iPad platforms using the iOS SDK. User interface design for mobile devices and unique user interactions using multi-touch technologies. Object-oriented design using model-view-controller paradigm, memory management, Swift programming language. Other topics include: object-oriented database API, animation, mobile device power management, multi-threading, networking and performance considerations.</span></span></span></span><br></div>
+      <div>
+      </div>
+      <div>
+      <h2>Course Prerequisites</h2>
+      <span>C language and object-oriented programming experience exceeding&nbsp;<a href="https://itunes.apple.com/us/course/programming-abstractions/id495054099" target="_blank" data-mce-href="https://itunes.apple.com/us/course/programming-abstractions/id495054099">Programming Abstractions</a>&nbsp;level.<br>
+      Completion of&nbsp;<a href="https://itunes.apple.com/us/course/programming-paradigms/id495054064" target="_blank" data-mce-href="https://itunes.apple.com/us/course/programming-paradigms/id495054064">Programming Paradigms</a>.
+      <br>Recommended: UNIX, graphics, databases.</span><br>
+
+      <h2>Course Videos</h2>
+      <a class="videoMe1" href="#">1. Course Overview and Introduction to iOS</a><br>
+      <a class="videoMe2" href="#">2. Model View Controller</a><br>
+      <a class="videoMe3" href="#">3. Swift and the Foundation Framework</a>
+
+
+      <div id="footer">
+      <br>
+      <div><span>Offered by Stanford's School of Engineering.</span><br></div>
+      <div><span>For more online learning opportunities, please visit&nbsp;<a href="http://online.stanford.edu/" target="_blank" data-mce-href="http://online.stanford.edu/">Stanford Online</a>.</span><br></div>
+      </div>
+	<div id="screenDimmer"></div>
+   <div id="video">
+   <iframe id="frame" width="560" height="315" src="https://www.youtube.com/embed/zpVsrWvd47Y" frameborder="0" allowfullscreen></iframe>
+   </div>
+     <script src="http://vjs.zencdn.net/5.8.8/video.js"></script>
+
+      <script type="text/javascript">
+		var $video = $('#screenDimmer, #video');
+
+		$('.videoMe1').click(function() {
+         $('#frame')[0].src = "https://www.youtube.com/embed/zpVsrWvd47Y";
+		    $video.fadeIn();
+		});
+
+		$('.videoMe2').click(function() {
+			         $('#frame')[0].src = "https://www.youtube.com/watch?v=tmlP3K7Wtgs";
+		    $video.fadeIn();
+		});
+
+		$('.videoMe3').click(function() {
+			         $('#frame')[0].src = "https://www.youtube.com/watch?v=caawQoBkgfM";
+
+		    $video.fadeIn();
+		});
+
+		$(window).keyup(function(e) {
+		    if (e.keyCode === 27) {
+		        $video.fadeOut();
+		    }
+		});
+      </script>
+   </body>
+</html>
