@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Facts Sheet</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		body {
+			font-family: -apple-system, "Arial";
+			margin: 50px 50px 50px 50px;
+			line-height: 1.5;
+		}
+		a {
+			text-decoration: none;
+			color: #2196F3;
+		}
+
+	</style>
+</head>
+<body>
+<h2>About Me</h2>
+
+<ul>
+<li>First Name is Luming, Last Name is Yin.</li>
+<li>331628 Georgia Tech Station, 350 Ferst Drive, Atlanta, GA, 30332.</li>
+</ul>
+
+<h2>Paper Sizes</h2>
+<ul>
+	<li><b>U.S. Letter: 2550 x 3300 for 300 ppi</b></li>
+	<li><b>A4: 2480 x 3508 for 300 ppi</b></li>
+
+	<li>U.S. Letter: 8.5 x 11 inches</li>
+	<li>U.S. Letter: 21.6 x 28 cm</li>
+	<li>U.S. Letter: 612 x 792 for 72 ppi</li>
+	<li>A4: 8.3 x 11.7 inches</li>
+	<li>A4: 21.0. x 29.7cm</li>
+	<li>A4: 595 x 842 for 72 ppi</li>
+</ul>
+
+<h2>Objective-C Blocks</h2>
+<ul>
+<li><p>As a local variable:</p>
+<code>returnType (^blockName)(parameterTypes) = ^returnType(parameters) {...};</code></li>
+<li><p>As a property:</p>
+<code>@property (nonatomic, copy, nullability) returnType (^blockName)(parameterTypes);</code></li>
+<li><p>As a method parameter:</p>
+<code>- (void)someMethodThatTakesABlock:(returnType (^nullability)(parameterTypes))blockName;</code></li>
+<li><p>As an argument to a method call:</p>
+<code>[someObject someMethodThatTakesABlock:^returnType (parameters) {...}];</code></li>
+<li><p>As a typedef:</p>
+<code>typedef returnType (^TypeName)(parameterTypes);</code><br>
+<code>TypeName blockName = ^returnType(parameters) {...};</code></li>
+</ul>
+</body>
+</html>
