@@ -1,92 +1,369 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Kay. Geek. Student. Cinematographer. Software Engineer. Designer.">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="robots" content="noindex">
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Kay Yin - Mobile and Web Developer.</title>
+		<meta name="description" content="Kay Yin - Mobile and Web Developer.">
+		<meta name="author" content="KayYin.ga">
 
-    <title>Hi, I'm Kay.</title>
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:title" content="Hi, I'm Kay.">
-    <meta property="og:url" content="http://HiKay.github.io">
-    <meta property="og:site_name" content="Hi, I'm Kay.">
-    <meta property="og:type" content="website">
-    <script type='application/javascript' src='support/fastclick.min.js'></script>
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="favicon/manifest.json">
-    <link rel="shortcut icon" href="favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#111111">
-    <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
-    <meta name="msapplication-config" content="favicon/browserconfig.xml">
-    <meta name="theme-color" content="#080808">
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico">
 
-    <link rel="stylesheet" href="support/style.css">
-    <script type="text/javascript">
-        if ('addEventListener' in document) {
-    document.addEventListener('DOMContentLoaded', function() {
-        var attachFastClick = Origami.fastclick;
-        attachFastClick(document.body);
-     }, false);
-    }
-    </script>
+		<!-- Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
 
-</head>
-<body>
-    <main>
-        <header>
-                <noscript>
-                <h1 class="logo">Kay. Geek. Student. Cinematographer. Software Engineer. Designer.</h1>
-            </noscript>
-            <h1 class="logo"></h1>
-        </header>
-        <section class="content">
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 
-            <p id="ttl"><br>2016. You made it great.</p>
-            <p>2016 is a year of memories, entertainment and inspirations. Every year, I celebrate amazing people and things that make my year great. <a target="_blank" href="enlight/index.html">Take a look here</a>.</p>
+		<!-- Font Awesome CSS -->
+		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link href="css/animations.css" rel="stylesheet">
+
+		<!-- Worthy core CSS file -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- Custom css --> 
+		<link href="css/custom.css" rel="stylesheet">
+	</head>
+
+	<body class="no-trans">
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+		<!-- header start -->
+		<!-- ================ --> 
+		<header class="header fixed clearfix navbar navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+
+						<!-- header-left start -->
+						<!-- ================ -->
+						<div class="header-left clearfix">
+
+							<!-- logo -->
+							<div class="logo smooth-scroll">
+								<a href="#banner"><img id="logo" src="images/logo.png" alt="Worthy"></a>
+							</div>
+
+							<!-- name-and-slogan -->
+							<div class="site-name-and-slogan smooth-scroll">
+								<div class="site-name"><a href="#banner">Kay Yin</a></div>
+								<div class="site-slogan">Mobile and Web Developer.</div>
+							</div>
+
+						</div>
+						<!-- header-left end -->
+
+					</div>
+					<div class="col-md-8">
+
+						<!-- header-right start -->
+						<!-- ================ -->
+						<div class="header-right clearfix">
+
+							<!-- main-navigation start -->
+							<!-- ================ -->
+							<div class="main-navigation animated">
+
+								<!-- navbar start -->
+								<!-- ================ -->
+								<nav class="navbar navbar-default" role="navigation">
+									<div class="container-fluid">
+
+										<!-- Toggle get grouped for better mobile display -->
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+												<span class="sr-only">Toggle navigation</span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+										</div>
+
+										<!-- Collect the nav links, forms, and other content for toggling -->
+										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
+											<ul class="nav navbar-nav navbar-right">
+												<li class="active"><a href="#banner">Home</a></li>
+												<li><a href="#about">Bio</a></li>
+												<li><a href="#portfolio">Sample Works</a></li>
+												<li><a href="resume/KayYin_Resume.pdf" target="_blank">Resumé</a></li>
+												<li><a href="#contact">Contact</a></li>
+											</ul>
+										</div>
+
+									</div>
+								</nav>
+								<!-- navbar end -->
+
+							</div>
+							<!-- main-navigation end -->
+
+						</div>
+						<!-- header-right end -->
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+
+		<!-- banner start -->
+		<!-- ================ -->
+		<div id="banner" class="banner">
+			<div class="banner-image"></div>
+			<div class="banner-caption">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
+							<h1 class="text-center">Kay Yin. <span>Developer.</span></h1>
+							<p class="lead text-center">From sorting arrays, creating custom data structures to building great apps and beloved full-stack websites, there's a lot more to learn in every step I take.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- banner end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 id="about" class="title text-center">Biography</h1>
+						<p class="lead text-center">Kay Yin. Java, iOS and Web Developer.</p>
+						<div class="space"></div>
+						<div class="row">
+							<div class="col-md-3">
+								<center><img src="images/section-image-1.jpg" alt=""></center>
+								<div class="space"></div>
+							</div>
+							<div class="col-md-9">
+								<p>I am currently persuing a BCompSc degree at Georgia Tech with an anticipated graduation date of 2020. With the goal to build powerful software for creative professionals in the future, I stay sharp on understanding fundementals, such as customized data structures, algorithms, and matrix transformations, that would lead to my eventual goal.</p>
+								<p>I am also interested in creating engaging and immersive experience for mobile and for the web, Kay is involved in the GT iOS Club and the GT WebDev Club.</p>
+								<br>
+								<p><b>Skills</b></p>
+								<ul class="list-unstyled">
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Objective-C and Swift with Cocoa Touch (iOS) and Cocoa (macOS)</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> HTML, CSS, JavaScript and Backend Node.js</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Java and Java FX for Desktop GUI</li>
+								</ul>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section">
+			<div class="container">
+				<h1 class="text-center title" id="portfolio">Sample Works</h1>
+				<p class="lead text-center">Projects and apps I worked on.</p>
+				<div class="separator"></div>
+				<br>			
+				<div class="row object-non-visible" data-animation-effect="fadeIn">
+					<div class="col-md-12">
+<div class="row">
+	<div class="col-md-7">
+		<img src="images/portfolio1-two.png" class="img-responsive" alt="Responsive image">
+	</div>
+	<div class="col-md-5 vcenter">
+		<h1>Two</h1>
+		<p>Goodbye, typing indicators. Hello, live messages.</p>
+		<p>Built with Firebase, users can stay in touch with the most important people in their lives with live messages, fading photos and screen mirroring.</p>
+		<p><a href="https://github.com/HiKay/Two" target="_blank"><i class="fa fa-github"></i> Source available on Github</a></p>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-md-12">
+		<h1><center>WaterShed App</center></h1>
+		<!-- <div style="padding-left:5%; padding-right: 5%"> -->
+		<p>Collaboratively with fellow Android and Java developers, we've created a platform for users to locate, submit and share clean water sources. With a MVC design in mind, this cross-platform app to help users in developing countries locate clean water sources. The app features user authentication, Google Maps and iOS Mapkit integration, data persistence as well as a series of custom UI and UI animation.</p>
+		<p><a href="https://github.com/HiKay/WaterShed-iOS" target="_blank"><i class="fa fa-github"></i> Source for iOS</a></p>
+		<p><a href="https://github.com/goh31/WaterShed" target="_blank"><i class="fa fa-github"></i> Source for Android</a></p>
+		<!-- </div> -->
+	</div>
+	<div class="col-md-12">
+		<img src="images/portfolio2-watershed.png" class="img-responsive" alt="Responsive image">
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-md-12">
+		<h1>Other Projects</h1>
+		<p><a href="https://github.com/HiKay/SubtitleKitCLI" target="_blank">SubtitleKit</a> provided valuable assistance with bilingual video subtitle productions. A series of popular iOS apps are rewritten with AppKit for the Mac, including <a href="https://github.com/HiKay/VoiceMemoMac" target="_blank">Voice Memo</a>, <a href="https://github.com/HiKay/Clock" target="_blank">Clock</a> and <a href="https://github.com/HiKay/WeatherMac" target="_blank">Weather</a>. Web projects, such as <a href="http://FRSExcuses.com" target="_blank">FRS Excuses</a> and <a href="http://www.suisreaction.com" target="_blank">ReAction.com</a> has attracted thousands of unique viewers.</p>
+		<p><a href="resume/KayYin_Resume.pdf" target="_blank"><i class="fa fa-github"></i> View Resumé</a></p>
+	</div>
+</div>
+<hr>
 
 
-            <p id="ttl"><br>In my heart lives a Computer Scientist.</p>
-            <p>I am currently majoring in <a target="_blank" href="http://www.cc.gatech.edu">Computer Science</a> at <a target="_blank" href="http://www.cc.gatech.edu">Georgia Tech</a>. I worked on developing <a target="_blank" href="https://github.com/HiKay/SubtitleKitCLI">SubtitleKit</a>, <a target="_blank" href="https://github.com/HiKay/MappingTwitter">MappingTwitter</a>, and a few <a target="_blank" href="https://github.com/HiKay/macOSLucidaGrande">Mac</a> <a target="_blank" href="https://github.com/schreiberstein/lucidagrandeyosemite">utilities</a>, delivered several full stack website for various clients and conducted research on the compatibility of Apple's Cocoa Touch frameworks across OS releases</a>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
 
 
-            <p id="ttl"><br>In my heart lives an entrepreneur.</p>
-            <p>I am the Chief Media Officer of <a target="_blank" href="https://www.youtube.com/channel/UC6HDWlv_yKm_6-pOL_qTfbQ/videos">the SUIS student video club</a>, <a target="_blank" href="https://www.youtube.com/watch?v=bGDmKtI9nM8">making</a> <a target="_blank" href="https://www.youtube.com/watch?v=cbValDCStbY">memories</a> <a target="_blank" href="https://www.youtube.com/watch?v=1nceaaffV9M">timeless</a> and <a target="_blank" href="https://www.youtube.com/watch?v=XpH8VMMmhxc">accessible</a>. At <a target="_blank" href="http://www.uclaextension.edu/">UCLA Extension</a>, I had a blast dreaming up startup VibeFind with my friends. I also provide business consultation for smaller businesses from time to time.</p>
 
-            <p id="ttl"><br>In my heart lives a reporter.</p>
-            <p>I ocasionally <a target="_blank" href="https://WriteKay.github.io/">write and report</a> about random technical stuff. Somehow and totally unexpectedly, those got featured on <a target="_blank" href="https://sixcolors.com/link/2016/06/what-apples-advanced-computer-vision-can-recognize/">Six Colors</a>, <a target="_blank" href="http://9to5mac.com/2014/09/30/yosemite-gm-provides-an-early-look-at-new-versions-of-pages-and-keynote-for-mac/">9to5Mac</a>, <a target="_blank" href="http://www.macrumors.com/2016/06/20/photos-app-detects-432-objects/">MacRumors</a>, <a target="_blank" href="http://www.heise.de/mac-and-i/meldung/OS-X-10-10-Hack-stellt-alte-Schriftart-wieder-her-2435073.html">Mac & i</a>, <a target="_blank" href="http://www.businessinsider.com/complete-list-of-objects-that-apple-photos-can-recognize-2016-6">BusinessInsider</a>, <a target="_blank" href="http://arstechnica.com/apple/2016/06/the-macos-sierra-developer-preview-different-name-same-ol-mac/4/#h7">Ars Technica</a>, <a target="_blank" href="http://atp.fm/episodes/175">ATP</a>, <a target="_blank" href="https://www.relay.fm/mpu/334">Mac Power Users</a>, <a target="_blank" href="http://www.dooland.com/magazine/37107">MacWorld Asia</a> and many more.</p>
+		<!-- footer start -->
+		<!-- ================ -->
+		<footer id="footer">
 
-            <p id="ttl"><br>In my heart lives a friendly human being.</p>
-            <p>You can find me by searching for user <a>iOSight</a> on <a target="_blank" href="http://www.wechat.com">WeChat</a>. Or give me a shoutout through <a target="_blank" href="https://twitter.com/iosight">Twitter</a>, <a target="_blank" href="https://github.com/HiKay">Github</a>, <a target="_blank" href="https://www.youtube.com/user/vista980622">Youtube</a>, <a target="_blank" href="https://www.instagram.com/kay.yin/">Instagram</a>, <a target="_blank" href="https://www.zhihu.com/people/kayyin">Zhihu</a> and <a target="_blank" href="mailto:KayYin@Me.com">Email</a>. I also celebrate my favourite things in this world <a target="_blank" href="enlight/index.html">every</a> <a target="_blank" href="highlights/highlights_15_en.html">year</a>. Want to see if you know me well? <a target="_blank" href="quiz/index.html">Take a quiz</a>.</p>
+			<!-- .footer start -->
+			<!-- ================ -->
+			<div class="footer section">
+				<div class="container">
+					<h1 class="title text-center" id="contact">Contact</h1>
+					<div class="space"></div>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="footer-content">
+								<p class="large">If you have a project we can collaborate on, or would like to provide more information on a job or internship I may be interested in, feel free to contact me via email or the inline form.</p>
+								<ul class="list-icons">
+									<li><i class="fa fa-envelope-o pr-10"></i> <a href="mailto:KayYin@gatech.edu">KayYin@gatech.edu</a></li>
+									<li><i class="fa fa-map-marker pr-10"></i> 331628 Georgia Tech Station, 30332</li>
+									<li><i class="fa fa-phone pr-10"></i> +1 404-566-6000</li>
+								</ul>
+								<ul class="social-links">
+									<li class="twitter"><a target="_blank" href="https://twitter.com/iOSight"><i class="fa fa-twitter"></i></a></li>
+									<li class="twitter"><a target="_blank" href="https://github.com/HiKay/"><i class="fa fa-github"></i></a></li>
+									<li class="twitter"><a target="_blank" href="https://medium.com/@iosight"><i class="fa fa-book"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="footer-content">
+								<div role="form" id="footer-form">
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="name2">Name</label>
+										<input type="text" class="form-control" id="name2" placeholder="Name" name="name2" required>
+										<i class="fa fa-user form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="email2">Email address</label>
+										<input type="email" class="form-control" id="email2" placeholder="Enter email" name="email2" required>
+										<i class="fa fa-envelope form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="message2">Message</label>
+										<textarea class="form-control" rows="8" id="message2" placeholder="Message" name="message2" required></textarea>
+										<i class="fa fa-pencil form-control-feedback"></i>
+									</div>
+									<input type="submit" value="Send" class="btn btn-default" onclick="submitSuggestion()">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .footer end -->
 
-            <p><br>Whoever's reading this, thanks for your time.</p>
+			<!-- .subfooter start -->
+			<!-- ================ -->
+			<div class="subfooter">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<p class="text-center">Kay Yin. All Rights Reserved, 2017.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .subfooter end -->
 
-            <p class="cheers">Best Regards,<br>Kay</p>
-        </section>
-    </main>
-    <script src="support/typewriter-bundle.js"></script>
-    <script src="support/script.js"></script>
+		</footer>
+		<!-- footer end -->
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+		<script type="text/javascript" src="plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Modernizr javascript -->
+		<script type="text/javascript" src="plugins/modernizr.js"></script>
+
+		<!-- Isotope javascript -->
+		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
+		
+		<!-- Backstretch javascript -->
+		<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
+
+		<!-- Appear javascript -->
+		<script type="text/javascript" src="plugins/jquery.appear.js"></script>
+
+		<!-- Initialization of Plugins -->
+		<script type="text/javascript" src="js/template.js"></script>
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="js/custom.js"></script>
+
+
+	</body>
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyADdZPKiTqcjAhM9RspSezgeFac5VcA-Xc",
+    authDomain: "hikay-5ca1b.firebaseapp.com",
+    databaseURL: "https://hikay-5ca1b.firebaseio.com",
+    projectId: "hikay-5ca1b",
+    storageBucket: "hikay-5ca1b.appspot.com",
+    messagingSenderId: "147525904185"
+  };
+  firebase.initializeApp(config);
+	var database = firebase.database();
+	var timeStamp = Date.now();
+	var userAgent = navigator.userAgent;
+	var date = new Date();
+	var timeString = date.toUTCString();
+	var width = $(window).width();
+	var height = $(window).height();
+	var availableHeight = window.screen.availHeight;
+	var availableWidth = window.screen.availWidth;
 
-  ga('create', 'UA-76183927-3', 'auto');
-  ga('send', 'pageview');
+function submitSuggestion() {
+    firebase.database().ref('submitted/' + timeString).set({
+        "name": document.getElementById('name2').value,
+        "email": document.getElementById('email2').value,
+        "message": document.getElementById('message2').value,
+        "userAgent": userAgent,
+        "width": width,
+        "height": height,
+        "availableWidth": availableWidth,
+        "availableHeight": availableHeight
+    }, function(error) {
+        if (error) {
+            console.log('Error has occured during saving process');
+            alert("Oops, an error occured! Try sending again?");
+        } else {
+            console.log("Data hss been saved succesfully");
+            alert("Thank you for contacting Kay! You will hear back shortly!");
+            document.getElementById('name2').value = "";
+            document.getElementById('email2').value = "";
+            document.getElementById('message2').value = "";
+        }
+    });
+    $.getJSON('http://freegeoip.net/json/?callback=?', function(data) {
+	});
+}
 
 </script>
-
-</body></html>
+</html>
